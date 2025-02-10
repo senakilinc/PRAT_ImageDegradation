@@ -4,11 +4,11 @@ from utils.utils import load_image, save_image
 from methods.halftoning.floyd_steinberg import floyd_steinberg_halftoning
 from methods.halftoning.atkinson import atkinson_dithering
 from methods.halftoning.bayers_threshold import bayer_halftoning
-from methods.halftoning.dot_traditional import dot_halftoning  # Import your halftoning methods
+from methods.halftoning.dot_traditional import dot_halftoning  
 from methods.noise.gaussian_noise import add_gaussian_noise
 from methods.noise.salt_and_pepper import add_salt_and_pepper_noise
-from methods.noise.film_grain import  apply_film_grain # Import your noise methods
-from methods.paper.ink_bleed import ink_bleed  # Import your paper feel methods
+from methods.noise.film_grain import  apply_film_grain 
+from methods.paper.ink_bleed import ink_bleed 
 
 def apply_pipeline(input_path, output_folder, halftoning_method, noise_method, paper_method,
                    halftoning_args=None, noise_args=None, paper_args=None, downscale_factor_halftone=1.0, downscale_factor_noise=1.0, downscale_factor_paper=1.0):
@@ -24,7 +24,7 @@ def apply_pipeline(input_path, output_folder, halftoning_method, noise_method, p
         halftoning_args (dict, optional): Arguments for the halftoning method.
         noise_args (dict, optional): Arguments for the noise method.
         paper_args (dict, optional): Arguments for the paper feel method.
-        downscale_factor (float, optional): Downscaling factor for the image.
+        downscale_factor(s) (float, optional): Downscaling factor for the image.
 
     Returns:
         str: Path to the final saved image.
